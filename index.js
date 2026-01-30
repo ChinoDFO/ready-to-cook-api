@@ -31,5 +31,8 @@ app.post('/api/openai', async (req, res) => {
   }
 });
 
-export default app;
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`🔥 API corriendo en puerto ${PORT}`);
+});
 
